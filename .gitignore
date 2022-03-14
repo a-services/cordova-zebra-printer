@@ -1,5 +1,6 @@
 node_modules
 src/ios/.DS_Store
 src/ios/lib/.DS_Store
+native/node_modules
 .DS_Store
 .vscode
