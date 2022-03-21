@@ -1,42 +1,38 @@
 # cordova-zebra-printer
-A Cordova plugin for Zebra CPCL printers for both iOS and Android with Ionic 3 bindings. This plugin only supports Zebra models that use CPCL printing. Feel free to contribute to this project if you need to support other methods of printing. It has only been tested with Zebra QLn320 printers. Let me know if you use if sucessfully with others.
 
-Also this now requires a minimum of Cordova 9 and cordova-ios 5.0.
-Current version of link_os_sdk is 1.5.1049
+A Cordova plugin for Zebra CPCL printers for both iOS and Android with [Appery.io](https://appery.io) Ionic 5 bindings. This plugin only supports Zebra models that use CPCL printing. It has only been tested with Zebra QLn320 printers.
 
-Get from npm
-```
-cordova plugin add ca-cleversolutions-zebraprinter
-```
-or get the latest version from git
-```
-cordova plugin add https://github.com/cleversolutions/cordova-zebra-printer.git
-```
+Based on https://github.com/cleversolutions/cordova-zebra-printer
 
-To use with Ionic 3
+## Using with Appery.io Ionic 5 projects
 
-Add the Ionic 3 bindings to your app.module.ts file
+Export the latest version of plugin as ZIP file using **Code > Download ZIP**
+https://github.com/a-services/cordova-zebra-printer.git
+
+Import Cordova plugin into [Appery.io](https://appery.io) using **Resources > Cordova plugins**.
+
+On **app** page open **Module** tab and add to **Imports** section:
+
 ```
-import { ZebraPrinter } from 'ca-cleversolutions-zebraprinter/native';
-...
-providers: [
-    ZebraPrinter,
-    ...
+import { ZebraPrinter } from 'ca-cleversolutions-zebraprinter/native/ngx';
 ```
 
-Then inject the ZebraPrinter into the constructor of the class where you wish to use it
-for example
-```
-constructor(public navCtrl: NavController, protected zebraPrinter:ZebraPrinter) {
-    console.log(">>>>>> Home Constructed <<<<<<<")
-  }
+and add to **Providers** section: `ZebraPrinter`
 
-  protected discover(){
-    console.log("Now Discover");
-    this.zebraPrinter.discover().then(result => {
-      console.log(result);
-    }).catch(err => {
-      console.error(err);
-    });
-  }
+
+Then on the page where you would like to use it, on the **Code** tab, in the **Includes** section, add in **Custom includes** subsection an item:
+
+```
+Name: { ZebraPrinter }
+Path: ca-cleversolutions-zebraprinter/native/ngx
+```
+
+In the **Variables** section add `zebraPrinter` variable with `ZebraPrinter` type and **Add DI** checked.
+
+You can then add a TypeScript block to the button's click event:
+
+```
+this.zebraPrinter.discover()
+    .then((res: any) => console.log('-- success:', res))
+    .catch((error: any) => console.error('-- error:', error));
 ```

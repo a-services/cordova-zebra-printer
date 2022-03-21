@@ -1,8 +1,8 @@
 
 {
     "name": "@ionic-native/zebra-printer",
-    "version": "0.9",
-    "description": "Ionic Native - Native plugins for ionic apps",
+    "version": "0.8",
+    "description": "A Cordova plugin for Zebra CPCL printers for both iOS and Android with Appery.io Ionic 5 bindings.",
     "module": "index.js",
     "typings": "index.d.ts",
     "author": "Appery.io Services",
