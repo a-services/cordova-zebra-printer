@@ -1,0 +1,18 @@
+
+{
+    "name": "@ionic-native/zebra-printer",
+    "version": "0.9",
+    "description": "Ionic Native - Native plugins for ionic apps",
+    "module": "index.js",
+    "typings": "index.d.ts",
+    "author": "Appery.io Services",
+    "license": "MIT",
+    "peerDependencies": {
+        "rxjs": "^5.5.0 || ^6.5.0",
+        "@ionic-native/core": "^5.1.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/a-services/cordova-zebra-printer.git"
+    }
+  }
