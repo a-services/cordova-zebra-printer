@@ -18,11 +18,11 @@ export interface PrinterStatus {
 /**
  * @name Zebra Printer
  * @description
- * Working with Zebra CPCL printers
+ * This plugin does something
  *
  * @usage
  * ```typescript
- * import { ZebraPrinter } from '@ionic-native/zebra-printer';
+ * import { ZebraPrinter } from 'ca-cleversolutions-zebraprinter/native/ngx';
  *
  *
  * constructor(private zebraPrinter: ZebraPrinter) { }
