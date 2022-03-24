@@ -15,12 +15,5 @@
     "cordova-android"
   ],
   "author": "Evan Moore",
-  "license": "MIT",
-  "engines": {
-    "cordovaDependencies": {
-      "3.0.0": {
-        "cordova": ">100"
-      }
-    }
-  }
+  "license": "MIT"
 }
